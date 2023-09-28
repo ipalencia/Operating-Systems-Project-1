@@ -1,0 +1,20 @@
+Group 2 - Jonathan, Adeel, Ian
+
+A) 
+Before starting project 0, I thought it would be more difficult 
+to download and set up Nachos. The process of installing and configuring
+Nachos took minutes and was much easier than expected. I had no problem 
+whatsoever running both the threads and userprog demos. 
+
+B) 
+Running the threads and userprog tests were very straight forward. Following
+the commands in the nachos warmup file, I ran into no issues and produces 
+the exact same output for both tests. 
+
+C) 
+The threads class is a fundamental part used for creating and managing 
+threads within the OS. It provides resources for representing and manipulating
+single threads. Some features of the thread class include thread creation, scheduling, 
+switching, termination, synchronization, etc... The threads class is an essential part 
+of this operating system. 
+
