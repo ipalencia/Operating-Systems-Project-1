@@ -24,17 +24,20 @@ int testnum = 1;
 //	purposes.
 //----------------------------------------------------------------------
 
-void
-SimpleThread(int which)
+int SharedVariable; 
+void SimpleThread(int which)
 {
-    int num;
-    
-    for (num = 0; num < 5; num++) {
-	printf("*** thread %d looped %d times\n", which, num);
-        currentThread->Yield();
+    int num, val;
+    for(num = 0; num < 5; num++) {
+            val = SharedVariable;
+            printf("*** thread %d sees value %d\n", which, val);
+            currentThread->Yield();
+            SharedVariable = val+1;
+            currentThread->Yield();
     }
+    val = SharedVariable;
+    printf("Thread %d sees final value %d\n", which, val);
 }
-
 //----------------------------------------------------------------------
 // ThreadTest1
 // 	Set up a ping-pong between two threads, by forking a thread 
